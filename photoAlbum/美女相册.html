@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>美女相册</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<script type="text/javascript" src=js/js1.js></script>
+</head>
+<body>
+	<h2>
+	    美女相册
+	</h2>	
+	<ul id="imagegallery" class="clearfix">
+		<li>
+			<a href="img/1.jpg" title="美女A">
+				<img src="img/1-small.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="img/2.jpg" title="美女B">
+				<img src="img/2-small.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="img/3.jpg" title="美女C">
+				<img src="img/3-small.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="img/4.jpg" title="美女D">
+				<img src="img/4-small.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="img/5.jpg" title="美女E">
+				<img src="img/5-small.jpg">
+			</a>
+		</li>
+	</ul>
+	<img src="img/placeholder.png" id="img" width="450" height="250" />
+	<p id="des">请选择一张图片</p>
+</body>
+<script type="text/javascript">
+	// 1.先获得要操作的对象
+var links=document.getElementsByTagName('a');
+var img=document.getElementById('img');
+var des=document.getElementById('des');
+// 2.给事件源注册事件
+for(var i=0;i<links.length;i++){
+	links[i].onclick=showPic;
+}
+
+function showPic(){
+		img.src=this.href;
+		des.innerText=this.title;
+		return false;//return false用来阻止a标签的默认跳转行为
+}
+</script>
+</html>

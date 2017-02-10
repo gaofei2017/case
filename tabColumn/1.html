@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab栏</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		#box{
+			width: 450px;
+			height: 300px;
+			border:1px solid #000;
+			padding: 10px;
+			margin:100px auto;
+		}
+		
+		ul li{
+			list-style: none;
+			float: left;
+			width: 80px;
+			height: 40px;
+			background-color: red;
+			text-align: center;
+			line-height: 40px;
+			margin-left: 8px;
+			color:#fff;
+		}
+		#box div{
+			width: 400px;
+			height: 100px;
+			border:1px solid #000;
+			margin:100px auto;
+			position: absolute;
+			z-index: 1;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+		<li>金融</li>
+		<li>房地产</li>
+		<li>互联网</li>
+		<li>音乐</li>
+		<li>娱乐</li>
+	</ul>
+	<div>金融</div>
+	<div>房地产</div>
+	<div>互联网</div>
+	<div>音乐</div>
+	<div>娱乐</div>
+	</div>
+	
+</body>
+</html>
